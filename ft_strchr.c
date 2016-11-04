@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 18:49:34 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/03 20:08:25 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/04 13:51:59 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/04 14:42:52 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	*memchr(const void *s, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	key;
-	int				i;
+	char key;
+	int i;
+	int len;
 
-	i = 0;
 	key = c;
-	while (i < n)
+	i = 0;
+	len = ft_strlen(s);
+	while (i <= len)
 	{
 		if (s[i] == key)
 			return (s[i]);
