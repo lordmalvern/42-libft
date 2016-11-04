@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 17:20:01 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/02 22:14:46 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/03 11:05:43 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strstr(const char *big, const char *little)
 {
-	size_t lit_len;
-	int i;
+	size_t	lit_len;
+	int		i;
 
 	lit_len = ft_strlen(little);
 	i = 0;
