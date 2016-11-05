@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/01 15:41:25 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/05 11:11:45 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/04 15:29:04 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/04 15:41:29 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_strclr(char *s)
 {
-	size_t len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len - 1);
+	int i;
+	int len;
+	i = 0;
+	len = ft_strlen(s);
+	while (i <= len)
+	{
+		s[i] = '\0';
+	}
 }

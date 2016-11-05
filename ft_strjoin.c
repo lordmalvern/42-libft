@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/01 15:41:25 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/05 11:11:45 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/05 10:02:01 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/05 11:51:43 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 #include <string.h>
 
-size_t	ft_strlen(const char *s)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t len;
+	char	*out;
+	int		i;
+	int		j;
+	int		k;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len - 1);
+	out = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (out == NULL)
+		return (NULL);
+	i = 0;
+	j = 0;
+	k = 0;
+	while (s1[j] != '\0')
+	{
+		out[i] = s1[j];
+		i++;
+		j++;
+	}
+	while (s2[k] != '\0')
+	{
+		out[i] = s2[k];
+		i++;
+		k++;
+	}
+	return (out);
 }

@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/01 15:41:25 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/05 11:11:45 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/04 15:17:06 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/04 15:18:16 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_strdel(char **as)
 {
-	size_t len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len - 1);
+	ft_memdel(*as);
 }
