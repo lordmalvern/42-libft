@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:09:03 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/05 18:43:16 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/06 16:45:55 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	fill;
 	unsigned char	*temp;
-	int				i;
+	size_t			i;
 
 	i = 0;
 	fill = c;

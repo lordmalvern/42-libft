@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:37:47 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/04 11:37:50 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/06 16:54:06 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = ft_strlen(s1);
 	j = 0;
