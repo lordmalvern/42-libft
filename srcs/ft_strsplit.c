@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:28:49 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 17:35:40 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/07 18:34:25 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ static int	num_strings(const char *s, char d)
 		temp = ft_strtok(&s[i], d, &i);
 		if (temp != NULL || temp[0] != '\0')
 			total++;
+		i++;
 	}
 	free(temp);
 	return (total);

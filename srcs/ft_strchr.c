@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:51:59 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 18:20:21 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/07 17:43:49 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (src[i] == key)
 			return (&src[i]);
+		i++;
 	}
 	return (NULL);
 }

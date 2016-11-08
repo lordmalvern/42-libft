@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 16:36:50 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 16:53:11 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/07 16:52:52 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	while (i <= len)
+	while (i < len)
 	{
 		dst[i] = '\0';
 		i++;

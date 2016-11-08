@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 18:49:34 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 18:23:49 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/07 16:13:36 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (src[i] == key)
 			return (&src[i]);
+		i++;
 	}
 	return (NULL);
 }

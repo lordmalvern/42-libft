@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:43:39 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 18:20:41 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/07 17:44:14 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (src[i] == key)
 			last = i;
+		i++;
 	}
 	return ((last == -1) ? NULL : &src[last]);
 }
