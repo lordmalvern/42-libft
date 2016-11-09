@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:37:47 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 17:57:53 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/08 14:24:29 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 size_t	ft_strlcat(char *s1, const char *s2, size_t size)
 {
-	int i;
-	int j;
-	int n;
+	size_t	i;
+	int		j;
+	int		n;
 
 	i = ft_strlen(s1);
 	j = 0;

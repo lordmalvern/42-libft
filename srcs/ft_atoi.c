@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 13:46:33 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 18:11:58 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/08 15:15:47 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 			sign = 1;
 		i++;
 	}
-	if (str[i] == '0')
+	if (str[i] == '0' && !ft_isdigit(str[i + 1]))
 		return (0);
 	while (ft_isdigit(str[i]) != 0)
 	{
