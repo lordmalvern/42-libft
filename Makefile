@@ -6,11 +6,11 @@
 #    By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/06 16:02:04 by bpuschel          #+#    #+#              #
-#    Updated: 2016/11/07 09:39:31 by bpuschel         ###   ########.fr        #
+#    Updated: 2016/11/09 21:14:43 by bpuschel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft 
 SRC = srcs/
 INCLUDE = includes/
 FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
@@ -22,16 +22,19 @@ ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c \
 ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c \
 ft_strjoin.c ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c \
 ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+OBJ = $(FILES:.c=.o)
 
-all:
+$(NAME):
 	gcc -Wall -Werror -Wextra -I $(INCLUDE) -c $(addprefix $(SRC), $(FILES))
-	ar rc $(NAME) $(patsubst %.c, %.o, $(FILES))
-	ranlib $(NAME)
+	ar rc $(addsuffix .a, $(NAME)) $(OBJ)
+	ranlib $(addsuffix .a, $(NAME))
+
+all: $(NAME)
 
 clean:
-	rm -f $(patsubst %.c, %.o, $(FILES))
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(addsuffix .a, $(NAME))
 
 re: fclean all

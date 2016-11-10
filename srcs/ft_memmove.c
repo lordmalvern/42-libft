@@ -6,32 +6,34 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:17:04 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/08 18:10:55 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/09 16:18:01 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-#include <stdlib.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*temp;
 	size_t			i;
+	int				j;
 	unsigned char	*d;
 	unsigned char	*s;
 
-	temp = (unsigned char *)malloc((len * sizeof(unsigned char)) + 1);
-	i = 0;
+	i = -1;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	ft_memcpy(temp, src, len);
-	while (i < len)
+	if (dst > src)
 	{
-		d[i] = temp[i];
-		i++;
+		j = len;
+		while (--j >= 0)
+			d[j] = s[j];
 	}
-	free(temp);
+	else
+	{
+		while (++i < len)
+			d[i] = s[i];
+	}
 	dst = d;
 	return (dst);
 }

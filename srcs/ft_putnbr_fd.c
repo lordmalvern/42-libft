@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 11:25:37 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/02 11:29:18 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/09 18:15:46 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/09 18:17:26 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,27 @@
 
 void		ft_putnbr_fd(int n, int fd)
 {
-	char	digit;
 	int		place;
 
 	place = 1;
 	if (n == 0)
 		ft_putchar_fd('0', fd);
+	else if (n == 2147483647)
+		ft_putstr_fd("2147483647", fd);
+	else if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
 	else
 	{
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			n *= -1;
+		}
 		while (n % (place * 10) != n)
 			place *= 10;
-		while (n != 0)
+		while (place != 0)
 		{
-			digit = (n / place) + 48;
-			ft_putchar_fd(digit, fd);
+			ft_putchar_fd((n / place) + 48, fd);
 			n -= (n / place) * place;
 			place /= 10;
 		}
