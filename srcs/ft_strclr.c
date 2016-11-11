@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:29:04 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 16:56:06 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 23:19:54 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	ft_strclr(char *s)
 	int len;
 
 	i = 0;
-	len = ft_strlen(s);
-	while (i <= len)
+	if (s != NULL)
 	{
-		s[i] = '\0';
-		i++;
+		len = ft_strlen(s);
+		while (i <= len)
+			s[i++] = '\0';
 	}
 }

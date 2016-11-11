@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 09:54:03 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 16:56:54 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 22:16:37 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strsub(const char *s, unsigned int start, size_t n)
 	unsigned int	end;
 	int				i;
 
+	if (s == NULL)
+		return (NULL);
 	out = ft_strnew(n);
 	if (out == NULL)
 		return (NULL);

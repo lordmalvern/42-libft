@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 10:02:01 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/05 11:51:43 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 22:20:40 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		j;
 	int		k;
 
+	if(s1 == NULL || s2 == NULL)
+		return (NULL);
 	out = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (out == NULL)
 		return (NULL);

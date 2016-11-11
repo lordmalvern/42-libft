@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:21:51 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/10 15:38:53 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 16:35:58 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		i++;
 		j = i - 1;
 	}
-	dst = d;
 	return ((i < n) ? dst + i : NULL);
 }

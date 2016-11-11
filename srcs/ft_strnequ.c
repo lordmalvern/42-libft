@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 11:18:29 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/03 11:18:34 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 22:15:35 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_strnequ(const char *s1, const char *s2, size_t n)
 {
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	return (ft_strncmp(s1, s2, n) == 0);
 }

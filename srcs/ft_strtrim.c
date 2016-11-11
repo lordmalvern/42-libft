@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 10:22:19 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 09:38:28 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 22:25:33 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,21 @@ char		*ft_strtrim(const char *s)
 	int		end;
 	int		i;
 
-	end = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	end = ft_strlen(s) - 1;
 	beg = 0;
-	while (iswhtspc(s[beg]))
+	while (iswhtspc(s[beg]) && beg <= end / 2)
 		beg++;
-	while (iswhtspc(s[end]))
+	while (iswhtspc(s[end]) && end >= beg)
 		end--;
 	i = 0;
-	out = ft_strnew(end - beg);
+	out = ft_strnew(end - beg + 1);
 	if (out == NULL)
 		return (NULL);
+	if (beg == end)
+		return (out);
 	while (beg <= end)
-	{
-		out[i] = s[beg];
-		i++;
-		beg++;
-	}
+		out[i++] = s[beg++];
 	return (out);
 }

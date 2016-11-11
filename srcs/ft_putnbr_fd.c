@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 18:15:46 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/09 18:17:26 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/10 20:31:40 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putnbr_fd(int n, int fd)
 {
-	int		place;
+	long	place;
 
 	place = 1;
 	if (n == 0)
