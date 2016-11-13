@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:06:17 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/07 16:57:11 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/12 11:57:55 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_strnew(size_t size)
 	out = (char *)malloc((size * sizeof(char)) + 1);
 	if (out == NULL)
 		return (NULL);
+	out[size] = '\0';
 	ft_strclr(out);
 	return (out);
 }
