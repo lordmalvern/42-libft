@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 13:46:33 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/13 12:22:12 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/12 22:36:53 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/13 17:11:52 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int i;
-	int n;
-	int sign;
-
-	i = 0;
-	n = 0;
-	sign = 0;
-	while (!ft_isprint(str[i]) || str[i] == ' ')
-		i++;
-	if ((str[i] == '+' || str[i] == '-') && ft_isdigit(str[i + 1]))
+	while (lst)
 	{
-		if (str[i] == '-')
-			sign = 1;
-		i++;
+		f(lst);
+		lst = lst->next;
 	}
-	if (str[i] == '0' && !ft_isdigit(str[i + 1]))
-		return (0);
-	while (ft_isdigit(str[i]))
-	{
-		n *= 10;
-		n += (str[i] - 48);
-		i++;
-	}
-	n *= (sign == 1) ? -1 : 1;
-	return (n);
 }

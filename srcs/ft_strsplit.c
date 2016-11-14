@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:28:49 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/12 21:38:29 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/13 17:11:28 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ static size_t	num_strings(const char *s, char d, size_t size)
 
 	total = 0;
 	i = 0;
+	if (ft_strchr(s, d) == NULL && !ft_strequ(s, ""))
+		return (1);
 	while (s[i] != '\0' && i < size)
 	{
 		temp = ft_strtok((s + i), d, &i, size);

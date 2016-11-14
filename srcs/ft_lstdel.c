@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 13:46:33 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/13 12:22:12 by bpuschel         ###   ########.fr       */
+/*   Created: 2016/11/12 22:13:13 by bpuschel          #+#    #+#             */
+/*   Updated: 2016/11/13 17:12:15 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_atoi(const char *str)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	int i;
-	int n;
-	int sign;
+	t_list *to_free;
 
-	i = 0;
-	n = 0;
-	sign = 0;
-	while (!ft_isprint(str[i]) || str[i] == ' ')
-		i++;
-	if ((str[i] == '+' || str[i] == '-') && ft_isdigit(str[i + 1]))
+	while (*alst)
 	{
-		if (str[i] == '-')
-			sign = 1;
-		i++;
+		del((*alst)->content, (*alst)->content_size);
+		to_free = *alst;
+		*alst = (*alst)->next;
+		free(to_free);
 	}
-	if (str[i] == '0' && !ft_isdigit(str[i + 1]))
-		return (0);
-	while (ft_isdigit(str[i]))
-	{
-		n *= 10;
-		n += (str[i] - 48);
-		i++;
-	}
-	n *= (sign == 1) ? -1 : 1;
-	return (n);
+	alst = NULL;
 }
