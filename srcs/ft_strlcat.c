@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 17:04:12 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/10 15:47:53 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/13 21:29:53 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ size_t	ft_strlcat(char *s1, const char *s2, size_t size)
 	}
 	if (size != 0 || j != n)
 		s1[i] = '\0';
-	if (size1 == 0)
+	if (size1 == 0 || size == 0)
 		return (size2);
-	if (size1 == size2)
+	if (size1 == size2 && (int)size >= size1)
 		return (size2 + size1);
 	return (size + size2);
 }

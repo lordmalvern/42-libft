@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/31 13:34:42 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/12 22:50:12 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/15 20:05:59 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+typedef struct		s_bst
+{
+	void			*content;
+	size_t			content_size;
+	struct s_bst	*left;
+	struct s_bst	*right;
+}					t_bst;
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -78,4 +85,17 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_pow(int base, int exp);
+int					ft_nroot(int base, int n);
+int					ft_sqrt(int base);
+double				ft_log(unsigned int n);
+int					ft_isprime(int num);
+t_bst				*ft_bstnew(void const *key, size_t key_size);
+t_bst				*ft_bstadd(t_bst **abst, t_bst *new);
+void				ft_bstdel(t_bst **abst, void (*del)(void *, size_t));
+void				ft_bstdelone(t_bst **abst, void (*del)(void *, size_t));
+void				ft_bstiter(t_bst *bst, void (*f)(t_bst *leaf));
+t_bst				*ft_bstmap(t_bst *bst, void (*f)(t_bst *leaf));
+t_bst				*ft_bsttour(t_bst *bst, int trav_type);
+t_bst				*ft_bstsearch(t_bst **abst, void *key);
 #endif

@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:28:49 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/13 17:11:28 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/13 20:01:10 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ static char		*ft_strtok(const char *str, const char d, size_t *i, size_t s)
 	size_t	beg;
 	size_t	end;
 
-	if (*i > s)
+	if (*i >= s)
 		return (NULL);
 	if (ft_strchr(str, d) == NULL)
 	{
 		*i = s;
-		return ((char *)str);
+		return (ft_strdup(str));
 	}
 	while (*str == d && *str != '\0')
 	{
