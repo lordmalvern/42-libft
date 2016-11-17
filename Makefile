@@ -6,11 +6,11 @@
 #    By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/06 16:02:04 by bpuschel          #+#    #+#              #
-#    Updated: 2016/11/16 15:54:14 by bpuschel         ###   ########.fr        #
+#    Updated: 2016/11/16 22:27:30 by bpuschel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft 
+NAME = libft.a 
 SRC = srcs/
 INCLUDE = includes/
 FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
@@ -25,11 +25,12 @@ ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 ft_pow.c ft_log.c ft_nroot.c ft_sqrt.c ft_isprime.c
 OBJ = $(FILES:.c=.o)
+.PHONY: all clean fclean re
 
 $(NAME):
 	gcc -Wall -Werror -Wextra -I $(INCLUDE) -c $(addprefix $(SRC), $(FILES))
-	ar rc $(addsuffix .a, $(NAME)) $(OBJ)
-	ranlib $(addsuffix .a, $(NAME))
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 all: $(NAME)
 
@@ -37,6 +38,6 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(addsuffix .a, $(NAME))
+	rm -f $(NAME)
 
 re: fclean all

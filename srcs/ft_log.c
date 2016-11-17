@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 16:53:52 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/16 15:13:53 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 22:01:38 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@
 **	Returns approximation of ln(x).
 */
 
-double	ft_dblpow(double x, int n)
+static double	ft_dblpow(double x, int n)
 {
 	if (n == 0)
 		return (1);
 	return (x * ft_dblpow(x, n - 1));
 }
 
-double to_sn(double x, int *digits)
+static double	to_sn(double x, int *digits)
 {
 	while (x >= 1)
 	{
@@ -38,7 +38,7 @@ double to_sn(double x, int *digits)
 	return (x);
 }
 
-double	ft_log(double x)
+double			ft_log(double x)
 {
 	double	log;
 	double	log10;
