@@ -6,12 +6,11 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:28:49 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/16 16:06:41 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 22:44:58 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static char		*get_word(const char *str, size_t beg, size_t end)
 {
