@@ -6,13 +6,12 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 09:23:19 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/12 21:48:20 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 16:03:07 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <string.h>
 
 static int	num_digits(long n, long *place, int *sign, int *i)
 {

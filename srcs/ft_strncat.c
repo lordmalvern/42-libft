@@ -6,12 +6,11 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:37:47 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/09 22:01:05 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 16:06:03 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {

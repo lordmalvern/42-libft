@@ -6,11 +6,11 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 13:29:59 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/14 13:31:37 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 16:04:39 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 int		ft_pow(int base, int exp)
 {

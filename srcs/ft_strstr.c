@@ -6,12 +6,11 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 17:20:01 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/06 18:21:09 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 16:06:50 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strstr(const char *big, const char *little)
 {

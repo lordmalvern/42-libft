@@ -6,13 +6,12 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 10:22:19 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/10 22:25:33 by bpuschel         ###   ########.fr       */
+/*   Updated: 2016/11/16 16:07:09 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <string.h>
 
 static int	iswhtspc(char c)
 {
