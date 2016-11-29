@@ -6,13 +6,12 @@
 #    By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/06 16:02:04 by bpuschel          #+#    #+#              #
-#    Updated: 2016/11/16 22:27:30 by bpuschel         ###   ########.fr        #
+#    Updated: 2016/11/29 15:16:04 by bpuschel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a 
-SRC = srcs/
-INCLUDE = includes/
+NAME = libft.a
+INCLUDE = .
 FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
 ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c \
@@ -28,7 +27,7 @@ OBJ = $(FILES:.c=.o)
 .PHONY: all clean fclean re
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -I $(INCLUDE) -c $(addprefix $(SRC), $(FILES))
+	gcc -Wall -Werror -Wextra -I $(INCLUDE) -c $(FILES)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
