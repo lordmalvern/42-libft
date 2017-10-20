@@ -6,7 +6,7 @@
 /*   By: bpuschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 17:04:12 by bpuschel          #+#    #+#             */
-/*   Updated: 2016/11/16 16:05:42 by bpuschel         ###   ########.fr       */
+/*   Updated: 2017/10/19 18:14:22 by bpuschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,11 @@ size_t	ft_strlcat(char *s1, const char *s2, size_t size)
 	size1 = ft_strlen(s1);
 	size2 = ft_strlen(s2);
 	i = size1;
-	j = 0;
+	j = -1;
 	n = size - size1 - 1;
-	while (s2[j] != '\0' && j < n)
-	{
-		s1[i] = s2[j];
-		i++;
-		j++;
-	}
-	if (size != 0 || j != n)
+	while (s2[++j] != '\0' && j < n)
+		s1[i++] = s2[j];
+	if (size != 0 || j == n)
 		s1[i] = '\0';
-	if (size1 == 0 || size == 0)
-		return (size2);
-	if (size1 == size2 && (int)size >= size1)
-		return (size2 + size1);
-	return (size + size2);
+	return (size1 + size2);
 }
